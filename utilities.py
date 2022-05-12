@@ -25,7 +25,6 @@ def update_csv(file_csv, articles, prices, odos, years, locations, links, just_d
 
 
 def verify_file(content_folder, file_csv):
-
     for item in content_folder:
         if item == file_csv:
             return True
@@ -33,3 +32,14 @@ def verify_file(content_folder, file_csv):
             pass
         
     return False
+
+def main(tipoBot):
+    file_csv = input("Sobre que archivo quieres escribir los resultados: ")
+    URL = 'https:www.mercadolibre.com'
+    car_bot = tipoBot(URL)
+    array_search = (['nissan sentra', 'kia vibro', 'kia sportage', 'mazda 3',
+     'toyota corolla', 'volkswagen jetta', 'nissan qashqai'])
+    for car in array_search:
+        car_bot.search_car(car, file_csv)
+    # car_bot.real_change_page()
+    car_bot.tearDown()
