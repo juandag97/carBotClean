@@ -12,9 +12,10 @@ class linuxBot(linuxHeadless):
         linuxHeadless.tearDown(self)
 
 def main():
-    file_csv = input("Sobre que archivo quieres escribir los resultados: ")
+    # file_csv = input("Sobre que archivo quieres escribir los resultados: ")
+    file_csv = 'final_cars.csv'
     URL = 'https:www.mercadolibre.com'
-    LINUX_PATH = '/home/jesus/Developer/bots/shopping'
+    LINUX_PATH = '/home/ubuntu/carBotClean'
     car_bot = linuxBot(URL)
     search_array = (['nissan sentra', 'kia vibro', 'kia sportage', 'mazda 3',
      'toyota corolla', 'volvo', 'audi a4', 'audi a5', 'audi a6', 'volkswagen jetta', 'nissan qashqai', 'bmw serie 3', 'bmw serie 4', 'bmw serie 5', 'bmw serie m'])
